@@ -1,5 +1,7 @@
 package diff
 
+import "fmt"
+
 // ------------------------------------------------ ---------------------------------------------------------------------
 
 // ChangeType 用于表示变化类型
@@ -20,7 +22,7 @@ const (
 	ChangeTypeReplace ChangeType = iota
 )
 
-func (x ChangeType) ToString() string {
+func (x ChangeType) String() string {
 	switch x {
 	case ChangeTypeNone:
 		return "None"
@@ -51,6 +53,10 @@ type StringDiff struct {
 
 	// 变化的内容
 	Content string
+}
+
+func (x *StringDiff) String() string {
+	return fmt.Sprintf("%s at [%d, %d], Content = %s", x.ChangeType.String(), x.BeginOffset, x.EndOffset, x.Content)
 }
 
 // ------------------------------------------------ ---------------------------------------------------------------------

@@ -12,6 +12,6 @@ func TestMyersStringDiffer_Diff(t *testing.T) {
 		// 处理错误
 	}
 	for _, diff := range diffs {
-		fmt.Printf("%v: %d, %d, %s\n", diff.ChangeType.ToString(), diff.BeginOffset, diff.EndOffset, diff.Content)
+		fmt.Printf("%v: %d, %d, %s\n", diff.ChangeType.String(), diff.BeginOffset, diff.EndOffset, diff.Content)
 	}
 }
