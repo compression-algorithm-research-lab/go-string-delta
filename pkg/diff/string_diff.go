@@ -56,7 +56,7 @@ type StringDiff struct {
 }
 
 func (x *StringDiff) String() string {
-	return fmt.Sprintf("%s at [%d, %d], Content = %s", x.ChangeType.String(), x.BeginOffset, x.EndOffset, x.Content)
+	return fmt.Sprintf("%s at [%d, %d), Content = %s", x.ChangeType.String(), x.BeginOffset, x.EndOffset, x.Content)
 }
 
 // ------------------------------------------------ ---------------------------------------------------------------------
