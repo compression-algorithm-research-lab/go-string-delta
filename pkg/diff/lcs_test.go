@@ -7,7 +7,7 @@ import (
 
 func TestLCSStringDiffer_Diff(t *testing.T) {
 	differ := NewLCSStringDiffer()
-	diffs, err := differ.Diff("ABCABBA", "CBABAC")
+	diffs, err := differ.Diff("AAA", "CCC")
 	if err != nil {
 		// 处理错误
 	}

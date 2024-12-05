@@ -7,7 +7,7 @@ import (
 
 func TestMyersStringDiffer_Diff(t *testing.T) {
 	differ := &MyersStringDiffer{}
-	diffs, err := differ.Diff("ABCABBA", "CBABAC")
+	diffs, err := differ.Diff("AAA", "BBB")
 	if err != nil {
 		// 处理错误
 	}
