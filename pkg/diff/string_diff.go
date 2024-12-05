@@ -20,6 +20,21 @@ const (
 	ChangeTypeReplace ChangeType = iota
 )
 
+func (x ChangeType) ToString() string {
+	switch x {
+	case ChangeTypeNone:
+		return "None"
+	case ChangeTypeInsert:
+		return "Insert"
+	case ChangeTypeDelete:
+		return "Delete"
+	case ChangeTypeReplace:
+		return "Replace"
+	default:
+		return ""
+	}
+}
+
 // ------------------------------------------------ ---------------------------------------------------------------------
 
 // StringDiff 标识一个变化
